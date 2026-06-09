@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MusicComponent {
 
+  role = 'ADMIN';
+
   musicList = [
     {
       title: 'Shape of You',
