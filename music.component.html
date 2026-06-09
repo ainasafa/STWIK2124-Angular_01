@@ -10,14 +10,17 @@
     <th>Action</th>
   </tr>
 
-  <tr>
-    <td>Sample Song</td>
-    <td>Sample Artist</td>
+  <tr *ngFor="let music of musicList">
+    <td>{{music.title}}</td>
+    <td>{{music.artist}}</td>
     <td>
-      <a href="#">Watch</a>
+      <a [href]="music.youtubeLink" target="_blank">
+        Watch
+      </a>
     </td>
     <td>
       <button>Delete</button>
     </td>
   </tr>
+
 </table>
