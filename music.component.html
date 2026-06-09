@@ -1,0 +1,36 @@
+<h2>Music Management System</h2>
+
+<!-- Admin Only Add Button -->
+<button *ngIf="role === 'ADMIN'">
+  Add Music
+</button>
+
+<br><br>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>YouTube Link</th>
+    <th>Action</th>
+  </tr>
+
+  <!-- Display Music Records -->
+  <tr *ngFor="let music of musicList">
+    <td>{{ music.title }}</td>
+    <td>{{ music.artist }}</td>
+    <td>
+      <a [href]="music.youtubeLink" target="_blank">
+        Watch
+      </a>
+    </td>
+
+    <td>
+      <!-- Admin Only Delete Button -->
+      <button *ngIf="role === 'ADMIN'">
+        Delete
+      </button>
+    </td>
+  </tr>
+
+</table>
