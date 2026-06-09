@@ -1,5 +1,6 @@
 h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 table {
@@ -7,12 +8,32 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
-  border: 1px solid black;
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
   padding: 10px;
+  text-align: center;
 }
 
 button {
   padding: 8px 12px;
-  margin: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
 }
